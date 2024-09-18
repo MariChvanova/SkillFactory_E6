@@ -4,3 +4,21 @@
 создание, редактирование и удаление групповых чатов и переписка в них (подсказка — управлять чатами лучше по REST API, а переписываться так же, как в обычных чатах, но с использованием на сервере идеологии «комнат»);
 редактирование личной информации пользователя (имя и аватар);
 просмотр списка других пользователей с переходом на отправку им сообщений.
+
+
+Получить Django secret-key ```bash python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())' ```
+Во внутреннюю директорию проекта добавить файл venv/settings.env для приватных настроек
+
+SECRET_KEY = ''
+Установить и запустить виртуальное окружение
+
+python -m venv venv
+venv\scripts\activate
+pip install -r requirements.txt
+Создание суперюзера
+
+python manage.py createsuperuser
+Старт сервера
+
+python manage.py runserver
+Основная страница на http://127.0.0.1:8000/
